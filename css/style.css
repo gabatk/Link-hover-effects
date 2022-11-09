@@ -95,8 +95,8 @@ body {
 
 
 
-    /* fourth link */
-    /* .four::after {
+/* third link- method 1. */
+/* .three::after {
     content: '';
     position: absolute;
     bottom: 0;
@@ -107,7 +107,29 @@ body {
     transform: scaleX(0);
 }
 
-.four:hover::after {
+.three:hover::after {
     transform: scaleX(1);
+} */
+
+/* third link- method 2. */
+.three::before,
+.three::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    bottom: 0;
+    border-bottom: 2px solid #fff;
 }
- */
+
+.three::before {
+    right: 50%;
+}
+
+.three::after {
+    left: 50%;
+}
+
+.three:hover::after,
+.three:hover::before {
+    width: 50%;
+}
