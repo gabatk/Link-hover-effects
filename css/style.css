@@ -133,3 +133,27 @@ body {
 .three:hover::before {
     width: 50%;
 }
+
+/* fourth link */
+.four {
+    z-index: 1;
+}
+
+.four::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0px;
+    background-color: #fff;
+    z-index: -1;
+}
+
+.four:hover {
+    color: #000;
+}
+
+.four:hover::after {
+    height: 100%;
+}
